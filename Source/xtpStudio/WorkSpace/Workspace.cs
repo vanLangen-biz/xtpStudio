@@ -61,7 +61,7 @@ namespace AvaloniaApplication1
                 return;
 
             var clickPositionCanvas = e.GetPosition(_canvas);
-            _deltaPosition = e.GetPosition((IInputElement)sender);
+            _deltaPosition = e.GetPosition((Visual)sender);
             e.Pointer.Capture((IInputElement)sender);
         }
 
