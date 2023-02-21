@@ -4,6 +4,8 @@ using Avalonia.Controls.Presenters;
 using Avalonia.Input;
 using Avalonia.Markup.Xaml;
 using Avalonia.Media;
+using System;
+using System.Diagnostics;
 
 namespace AvaloniaApplication1
 {
@@ -19,17 +21,19 @@ namespace AvaloniaApplication1
             //_border = this.FindControl<Border>("Border1");
             _labelStatus = this.FindControl<Label>("LabelStatus");
 
-         //   PropertyChanged += Block_PropertyChanged;
+            //   PropertyChanged += Block_PropertyChanged;
 
             _mainGrid = this.FindControl<Grid>("MainGrid");
+
+            Debug.Assert(_mainGrid != null, "MainGrid not found");
 
             var connector = new Connector();
             Grid.SetColumn(connector, 2);
             Grid.SetRow(connector, 0);
             Grid.SetRowSpan(connector, 2);
 
-            
 
+            // Add connectors by using binding.
             _mainGrid.Children.Add(connector);
 
             var connector2 = new Connector();
@@ -48,14 +52,14 @@ namespace AvaloniaApplication1
         }
 
         private Label _labelStatus;
-    
+
 
         //private void Block_PropertyChanged(object? sender, AvaloniaPropertyChangedEventArgs e)
         //{
         //    if (e.NewValue == null || e.OldValue == null)
         //        return;
 
-       
+
 
         //    //if (e.Property == ConnectorsLeftProp)
         //    //{
