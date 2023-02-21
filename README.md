@@ -5,4 +5,4 @@ Build expression trees to manipulate signals. Edit, share and compile designs. C
 
 - Visual studio 2023 Community.
 - Dotnet 7
-- AvaloniaUI
+- AvaloniaUI 11-preview 5
