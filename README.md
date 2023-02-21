@@ -1,4 +1,4 @@
-# XTP - eXpression Tree Programming Studio
+# xtpStudio - eXpression Tree Programming Studio
 
 Build expression trees to manipulate signals. Edit, share and compile designs. Crossplatform.
 
